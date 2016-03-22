@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+      PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Check Mail</title>
+</head>
+<body>
+	<h:form>
+			<div style="border:1px solid blue;overflow-y:auto; height:400px; width:70%;">
+                            <span>Sender: </span> <h:outputText value="#{emailBean.messageMessageBean.mailData.from}"/><br/>
+                            <span>Subject: </span> <h:outputText value="#{emailBean.messageMessageBean.mailData.subject}"/><br/>
+                            <span>Date: </span> <h:outputText value="#{emailBean.messageMessageBean.mailData.date}"/><br/><br/>
+                            <h:outputText value="#{emailBean.messageMessageBean.mailData.message}"/><br/>
+			</div>
+	        <h:commandButton action="checkMail.xhtml" value="Back"/>
+                
+                
+                
+	</h:form>
+</body>
+</html>

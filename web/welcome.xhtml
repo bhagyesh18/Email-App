@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"    
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Bhagyesh zi2736  Heli un5533 Email Application</title>
+    </h:head>
+    <h:body>
+    	
+         <center>
+            <table style="border-style: dashed">
+                  <h:form>
+                 <tr>
+                     <td colspan="3"> <center> <h3> <font color="green"> <span>Welcome </span> <h:outputText value="#{emailBean.loginId}"></h:outputText> </font></h3></center> 
+                      <hr></hr>
+              </td>
+          </tr>
+           <tr>
+              <td></td>
+           </tr>
+          <tr> &nbsp;&nbsp;&nbsp;
+              <td>&nbsp;<h:commandButton value="Send Mail"  action="sendMail"></h:commandButton></td>
+              <td> &nbsp;  <h:commandButton value="Check Mail"  action="#{emailBean.checkMail}"></h:commandButton></td>
+              <td> &nbsp;<h:commandButton value="Logout"  action="#{emailBean.logout}"></h:commandButton></td>&nbsp;&nbsp;&nbsp;
+             <br/>
+          </tr>
+             </h:form>
+                <br/><br/>
+            </table>
+        </center>
+        
+    </h:body>
+</html>

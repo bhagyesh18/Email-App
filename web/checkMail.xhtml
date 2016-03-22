@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"    
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Bhagyesh-zi2736  Heli-un5533</title>
+    </h:head>
+    <h:body>
+        <center>
+   		<h:form>
+                    <h:dataTable border="1" value="#{emailBean.messageMessageBean.messages}" var="data">
+	        <h:column >
+	         <h:selectBooleanCheckbox value="#{data.selected}"/>
+	        </h:column>
+    		<h:column>
+    			<f:facet name="header">From</f:facet>
+                        <h:commandLink action="display.xhtml" actionListener="#{emailBean.messageMessageBean.display(data)}">
+	            <h:outputText value="#{data.from}" />
+	           </h:commandLink>
+    			
+    		</h:column>	        
+	        <h:column >
+	          <f:facet name="header">
+	            <h:outputText value="Subject"/>
+	           </f:facet>
+                  
+	            <h:outputText value="#{data.subject}" />
+	        </h:column>
+    		<h:column>
+    			<f:facet name="header">Date</f:facet>
+    			 <h:outputText value="#{data.date}" />
+    		</h:column>	 	        
+	      </h:dataTable>
+                    <br/><br/>
+                    <h:commandButton id="submit1" actionListener="#{emailBean.messageMessageBean.deleteMail()}" value="Delete"/>
+	      <h:commandButton value="Back"  action="welcome"></h:commandButton>
+              <h:commandButton value="Logout"  action="#{emailBean.logout}"></h:commandButton>
+  		</h:form>
+        </center>
+    </h:body>
+</html>

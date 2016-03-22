@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"    
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title> Email Application</title>
+    </h:head>
+    <h:body>
+         <center>
+        <table  style="border-style: dashed"> 
+        
+    	<h:form prependId="false">
+    	 <tr>
+              <th colspan="2"> Java Mail Login </th>
+          </tr>
+          <tr>
+              <td>Username : </td>
+              <td>  <h:inputText id="Login" value="#{emailBean.loginId}" required="true">
+    				<f:validateLength minimum="4" maximum="60" />
+    			</h:inputText><br/></td>
+          </tr>
+          <tr>
+              <td>Password : </td>
+              <td>     <h:inputSecret  id="Password" value="#{emailBean.password}" required="true">
+    				<f:validateLength minimum="4" maximum="32" />
+    			</h:inputSecret><br/></td>
+          </tr>
+          <tr>
+              <td colspan="2">     <h:commandButton value="Login"  action="#{emailBean.login}"></h:commandButton>
+                  <h:messages   style="color:red;margin:8px;" />
+          </td>
+          </tr>	
+            
+           
+    		
+    	</h:form>
+        </table></center>
+    </h:body>
+</html>
